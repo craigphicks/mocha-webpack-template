@@ -1,0 +1,31 @@
+{
+  "name": "app2",
+  "sideEffects":false,
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-resources": "mkdir -p ../static && cp  ./resources/* ../static",
+    "build": "npm run copy-resources && tsc && webpack --config ./webpack.mocha.js",
+    "build-dev": "npm run copy-resources && tsc && ( tsc -w & ) && webpack serve --env dev --config ./webpack.mocha.js --progress",
+    "clean": "rm -rf ../static && rm -rf test-in-js"
+  },
+  "keywords": [],
+  "author": "craigphicks",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/lodash": "^4.14.170",
+    "@types/mocha": "^8.2.2",
+    "mocha": "^8.4.0",
+    "ts-loader": "^9.2.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}

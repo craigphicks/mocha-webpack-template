@@ -1,0 +1,11 @@
+*~
+.emacs*
+node_modules/
+tmp.*
+*.tmp
+tmp*/
+dist*/
+*.d.ts
+
+test-in-js/**/*
+test-in-js

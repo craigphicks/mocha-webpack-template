@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./test-in-js/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "ES2016",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports":true
+  },
+  "include":[
+    "test-in-ts/**/*"
+  ]
+}
