@@ -6,6 +6,7 @@ tmp.*
 tmp*/
 dist*/
 *.d.ts
+static/
 
 
 

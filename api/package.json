@@ -2,11 +2,9 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "type": "module",
+  "main": "server.ts",
   "scripts": {
-    "dev2": "( tsc -w & ) && nodemon server.js",
-    "dev": "nodemon"
+    "serve": "ts-node server.ts",
   },
   "dependencies": {
     "express": "^4.17.1"
