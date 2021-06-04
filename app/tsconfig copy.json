@@ -3,7 +3,7 @@
     "outDir": "./test-in-js/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es2020",
+    "module": "es6",
     "target": "ES2016",
     "allowJs": true,
     "moduleResolution": "node",

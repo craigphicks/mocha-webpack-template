@@ -21,3 +21,11 @@ export function test(b: boolean) {
     });
   });
 }
+export async function before(ms:number) {
+  return new Promise<void>((resolve) => {
+    setTimeout(() => {
+      console.log('before')
+      resolve();
+    }, ms);
+  });
+}

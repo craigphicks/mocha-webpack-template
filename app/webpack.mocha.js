@@ -1,5 +1,5 @@
 const path = require('path');
-
+//const __webpack_public_path__ = '/'
 const DIST = path.resolve(__dirname, '../static');
 module.exports = (env) => {
   console.log(`env=${JSON.stringify(env, null, 2)}`);
@@ -10,6 +10,7 @@ module.exports = (env) => {
     output: {
       filename: 'index.js',
       path: DIST,
+      publicPath: '/'
     },
   };
   if (isdev) {
