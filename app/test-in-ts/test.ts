@@ -3,7 +3,7 @@ import * as _ from 'lodash-es';
 function throwIfNot(b: boolean) {
   if (!b) throw new Error('fail ');
 }
-export function test(b: boolean) {
+function innertest(b: boolean) {
   describe('test', () => {
     it('1/4 passes ', () => {
       throwIfNot(true);
@@ -21,11 +21,16 @@ export function test(b: boolean) {
     });
   });
 }
-export async function before(ms:number) {
+async function before(ms:number) {
   return new Promise<void>((resolve) => {
     setTimeout(() => {
       console.log('before')
       resolve();
     }, ms);
   });
+}
+export async function test(){
+  return before(1000).then(()=>{
+    innertest(false)
+  })
 }
